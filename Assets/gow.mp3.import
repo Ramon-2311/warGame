@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gow.mp3-cf33b54410a9b0285e3c1a5066f39cd8.mp3str"
+
+[deps]
+
+source_file="res://Assets/gow.mp3"
+dest_files=[ "res://.import/gow.mp3-cf33b54410a9b0285e3c1a5066f39cd8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

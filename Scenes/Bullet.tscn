@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Bullet/bullet.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Bullet.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Character/deathExplosion.wav" type="AudioStream" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 48.0
+
+[node name="Bullet" type="Area2D"]
+rotation = 1.5708
+collision_layer = 16
+collision_mask = 9
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="MorteExplosao" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]
